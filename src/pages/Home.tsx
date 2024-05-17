@@ -1,11 +1,14 @@
 import MaxWidthWrapper from '../components/MaxWidthWrapper.tsx';
 import Screen1 from '../assets/screen_1.png';
 import Screen2 from '../assets/screen_2.png';
+import Arrow from '../assets/arrow.png';
 import { Fireworks } from '@fireworks-js/react';
 import { useEffect, useState } from 'react';
+import { cn } from '../utils';
 
 export default function Home() {
   const [showFireworks, setShowFireworks] = useState(true);
+  const [showArrow, setShowArrow] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -15,6 +18,13 @@ export default function Home() {
 
   return (
     <>
+      <img
+        src={Arrow}
+        alt='arrow'
+        className={cn('fixed top-20 right-20 animate-bounce hidden', {
+          ['block']: showArrow,
+        })}
+      />
       <MaxWidthWrapper className='mb-12 mt-10 flex flex-col items-center justify-center text-center relative'>
         {showFireworks && <Fireworks className='absolute' />}
         <div className='mx-auto mb-4 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full border border-gray-200 bg-white px-7 py-2 shadow-md backdrop-blur transition-all hover:border-gray-300 hover:bg-white/50'>
@@ -54,6 +64,8 @@ export default function Home() {
                     src={Screen1}
                     alt='pin extension'
                     className='rounded-md bg-white shadow-2xl ring-1 ring-gray-900/10'
+                    onMouseEnter={() => setShowArrow(true)}
+                    onMouseLeave={() => setShowArrow(false)}
                   />
                 </div>
               </div>
@@ -88,6 +100,8 @@ export default function Home() {
                   src={Screen2}
                   alt='pin extension'
                   className='rounded-md bg-white shadow-2xl ring-1 ring-gray-900/10'
+                  onMouseEnter={() => setShowArrow(true)}
+                  onMouseLeave={() => setShowArrow(false)}
                 />
               </div>
             </div>
