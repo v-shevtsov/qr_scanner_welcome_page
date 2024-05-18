@@ -33,7 +33,7 @@ export default function Home() {
           </p>
         </div>
         <h1 className='max-w-4xl text-5xl font-bold md:text-6xl lg:text-7xl'>
-          QR Code Scanner from Image <span className='text-blue-600'>Installed</span>.
+          QR Code Scanner from Image <span className='text-blue-600'>Installed</span>
         </h1>
         <p className='mt-10 max-w-prose text-zinc-700 sm:text-lg'>
           1. Pin the extension for quick access to the QR Code Scanner from Image:
