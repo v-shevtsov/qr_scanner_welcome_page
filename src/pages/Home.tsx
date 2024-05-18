@@ -36,7 +36,7 @@ export default function Home() {
           QR Code Scanner from Image <span className='text-blue-600'>Installed</span>.
         </h1>
         <p className='mt-10 max-w-prose text-zinc-700 sm:text-lg'>
-          1. Pin the extension for quick access to the QR Code Scanner from Image.
+          1. Pin the extension for quick access to the QR Code Scanner from Image:
         </p>
       </MaxWidthWrapper>
 
@@ -89,7 +89,7 @@ export default function Home() {
 
       <MaxWidthWrapper className='mt-10 flex flex-col items-center justify-center text-center relative'>
         <p className='mt-6 max-w-prose text-zinc-700 sm:text-lg'>
-          2. Simply click on the extension icon to open the scanner.
+          2. Simply click on the extension icon to open the scanner:
         </p>
 
         <div>
